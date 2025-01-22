@@ -1,0 +1,34 @@
+# === FRONTEND ===
+# dependencies
+frontend/fujifilm-project/node_modules/
+frontend/fujifilm-project/.pnp
+frontend/fujifilm-project/.pnp.js
+
+# testing
+frontend/fujifilm-project/coverage/
+
+# production
+frontend/fujifilm-project/build/
+
+# misc
+frontend/fujifilm-project/.DS_Store
+frontend/fujifilm-project/.env.local
+frontend/fujifilm-project/.env.development.local
+frontend/fujifilm-project/.env.test.local
+frontend/fujifilm-project/.env.production.local
+
+frontend/fujifilm-project/npm-debug.log*
+frontend/fujifilm-project/yarn-debug.log*
+frontend/fujifilm-project/yarn-error.log*
+
+# === BACKEND (Si lo agregas después) ===
+backend/bin/
+backend/obj/
+backend/.vs/
+
+# === GENERAL ===
+.DS_Store
+.env
+.idea/
+.vscode/
+Thumbs.db
