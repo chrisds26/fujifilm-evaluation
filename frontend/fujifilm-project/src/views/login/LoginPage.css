@@ -1,0 +1,22 @@
+.login-page {
+    background-color: #9ce0db;
+}
+
+.info-bar {
+    background-color: white;
+}
+
+.img-logo {
+    width: 30%;
+}
+
+.title-project {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.form-login {
+    background-color: #dbd6da;
+    border-radius: 5px;
+    padding: 20px;
+}
