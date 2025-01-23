@@ -1,0 +1,12 @@
+C:\Users\CHRISTIAN\source\repos\Object\bin\Debug\net7.0\Object.deps.json
+C:\Users\CHRISTIAN\source\repos\Object\bin\Debug\net7.0\Object.dll
+C:\Users\CHRISTIAN\source\repos\Object\bin\Debug\net7.0\Object.pdb
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.csproj.AssemblyReference.cache
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.AssemblyInfoInputs.cache
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.AssemblyInfo.cs
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.csproj.CoreCompileInputs.cache
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.dll
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\refint\Object.dll
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\Object.pdb
+C:\Users\CHRISTIAN\source\repos\Object\obj\Debug\net7.0\ref\Object.dll
