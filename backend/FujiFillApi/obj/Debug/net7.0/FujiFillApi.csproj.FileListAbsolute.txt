@@ -43,3 +43,10 @@ C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Object.dll
 C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\BusinessLayer.pdb
 C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Object.pdb
 C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\DataLayer.pdb
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\CHRISTIAN\source\repos\FujiFillApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

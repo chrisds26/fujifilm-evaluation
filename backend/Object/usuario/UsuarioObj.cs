@@ -17,5 +17,6 @@ namespace Object.usuario
         public string? Telefono { get; set; }
 	    public string? Contrasena { get; set; }
         public bool Estatus { get; set; }
+        public string Token { get; set; }
     }
 }
