@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AddProduct.css';
 import InfoBar from '../../components/info-bar/InfoBar';
+import { insertProducto } from "../../services/productService";
 
 function AddProduct () {
 
@@ -30,7 +31,7 @@ function AddProduct () {
         }
 
         try {
-            const response = await axios.post('https://localhost:7118/api/Fujifilm/InsertProducto', producto);
+            await insertProducto(producto);
             alert('Datos enviados con exito')
             navigate('/dashboard');
         }

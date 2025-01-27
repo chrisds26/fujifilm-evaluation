@@ -3,6 +3,7 @@ import { data, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import './EditProduct.css';
 import InfoBar from '../../components/info-bar/InfoBar';
+import { getProductos, editProducto } from "../../services/productService";
 
 function EditProduct () {
 
@@ -15,12 +16,12 @@ function EditProduct () {
     };
 
     // Obtener productos
-    const getProductos = async () => {
+    const getProducts = async () => {
         try {
-            const response = await axios.get("https://localhost:7118/api/Fujifilm/getProducto");
-            if (response.data.length > 0){
+            const response = await getProductos();
+            if (response.length > 0){
 
-                var d = response.data.filter(x => x.idProducto === parseInt(id))[0]
+                var d = response.filter(x => x.idProducto === parseInt(id))[0]
                 setProducto(d);
             }
             else {
@@ -32,7 +33,7 @@ function EditProduct () {
     }
 
     useEffect(() => {
-        getProductos();
+        getProducts();
     }, []);
 
     // Actualizar producto
@@ -56,8 +57,8 @@ function EditProduct () {
         }
 
         try {
-            const response = await axios.post('https://localhost:7118/api/Fujifilm/EditProducto', producto);
-            alert('Datos enviados con exito')
+            const response = await editProducto(producto);
+            alert('Datos actualizados con exito')
             navigate('/dashboard');
         }
         catch (error) {

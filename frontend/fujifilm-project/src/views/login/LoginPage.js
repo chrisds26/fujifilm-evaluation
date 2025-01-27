@@ -3,15 +3,16 @@ import { useNavigate } from "react-router-dom";
 import './LoginPage.css';
 import axios from "axios";
 import InfoBar from "../../components/info-bar/InfoBar";
+import { login } from "../../services/loginService";
 
 function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const fetchLogin = async (values) => {
+    /* const fetchLogin = async (values) => {
         try {
-            const response = await axios.post("https://localhost:7118/api/Fujifilm/login", values);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, values);
             if (response.data.contrasena !== null){
                 localStorage.setItem('idUsuario', response.data.idUsuario)
                 navigate('/dashboard');
@@ -22,21 +23,29 @@ function LoginPage() {
         } catch (err) {
             console.error("Error al obtener datos: ", err);
         }
-    }
+    } */
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         let values = {
             nombre: username,
-            contrasena: password
+            contrasena: password,
+            token: ''
         }
-        fetchLogin(values);
-    
-        /* if (username === validUser && password === validPassword) {
-          navigate('/dashboard');
-        } else {
-          alert('Usuario o contraseña incorrectos');
-        } */
+        /* fetchLogin(values); */
+        try {
+            const response = await login(values);
+            if (response.contrasena !== null){
+                localStorage.setItem('idUsuario', response.idUsuario)
+                localStorage.setItem('token', response.token)
+                navigate('/dashboard');
+            }
+            else {
+                alert('Usuario o contraseña incorrectos');
+            }
+        } catch (err) {
+            console.error("Error al obtener datos: ", err);
+        }
     };
 
     return(

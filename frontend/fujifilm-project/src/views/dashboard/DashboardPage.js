@@ -3,6 +3,7 @@ import axios from "axios";
 import './DashboardPage.css'
 import { useNavigate } from "react-router-dom";
 import InfoBar from "../../components/info-bar/InfoBar";
+import { getProductos, deleteProducto } from "../../services/productService";
 
 function DashboardPage() {
 
@@ -11,20 +12,19 @@ function DashboardPage() {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const navigate = useNavigate();
 
-
     // Obtener productos
-    const getProductos = async () => {
+    const getProducts = async () => {
         try {
-            const response = await axios.get("https://localhost:7118/api/Fujifilm/getProducto");
-            if (response.data.length > 0){
-                setProductos(response.data);
-                setFilteredProducts(response.data);
+            const response = await getProductos();
+            if (response.length > 0){
+                setProductos(response);
+                setFilteredProducts(response);
             }
             else {
                 alert('No hay datos');
             }
         } catch (err) {
-            console.error("Error al obtener datos: ", err);
+            console.error("Ocurrió un error al cargar los productos: ", err);
         }
     }
 
@@ -44,15 +44,17 @@ function DashboardPage() {
             let data = {
                 idProducto : id
             }
-            const response = await axios.post('https://localhost:7118/api/Fujifilm/DeleteProducto', data);
-            alert('Registro Eliminado con exito')
+            await deleteProducto(data);
+            alert('Registro eliminado con éxito');
+            getProducts();
         } catch (error) {
+            alert('Ocurrió un error al eliminar el producto.');
             console.error('Error: ', error);
         }
     };
 
     useEffect(() => {
-        getProductos();
+        getProducts();
     }, []);
 
     const handleSearch = (e) => {
